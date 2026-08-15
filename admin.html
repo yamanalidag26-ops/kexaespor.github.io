@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>KEXA Admin Panel</title><link rel="stylesheet" href="style.css"></head>
+<body class="admin-page">
+<header class="nav"><a class="brand" href="index.html"><span>K</span>EXA</a><a class="nav-btn" href="index.html">SITEYE DÖN ↗</a></header>
+<main class="admin-wrap">
+<div id="loginBox" class="admin-card login-card"><p class="eyebrow">KEXA ESPORTS</p><h1>ADMIN <span>PANEL</span></h1><p class="muted">Demo panel — değişiklikler bu tarayıcıda saklanır.</p>
+<label>Şifre<input id="password" type="password" placeholder="Admin şifresi"></label><button class="gold-btn" onclick="login()">GİRİŞ YAP</button><p id="loginMsg" class="error"></p></div>
+
+<div id="panel" class="hidden">
+<div class="admin-top"><div><p class="eyebrow">CONTROL CENTER</p><h1>KEXA <span>ADMIN</span></h1></div><button class="ghost-btn" onclick="logout()">ÇIKIŞ</button></div>
+<div class="admin-grid">
+<section class="admin-card"><h2>WAR ROOM</h2><label>Rakip<input id="aOpponent"></label><label>Skor <input id="aScore" placeholder="2-0"></label><label>Haritalar<input id="aMaps" placeholder="13–10, 13–10"></label><button class="gold-btn" onclick="saveWar()">KAYDET</button></section>
+<section class="admin-card"><h2>OYUNCU EKLE</h2><label>Oyuncu<input id="pName"></label><label>Rol<input id="pRole"></label><label>Görev<input id="pTask"></label><button class="gold-btn" onclick="addPlayer()">OYUNCU EKLE</button></section>
+<section class="admin-card wide"><h2>KADRO</h2><div id="adminPlayers"></div></section>
+<section class="admin-card wide"><h2>MAÇ EKLE</h2><div class="form-row"><label>Rakip<input id="mOpponent"></label><label>Haritalar<input id="mMaps"></label><label>Seri Skoru<input id="mScore"></label></div><button class="gold-btn" onclick="addMatch()">MAÇ EKLE</button><div id="adminMatches"></div></section>
+<section class="admin-card wide"><h2>SIRALAMA</h2><div id="adminRanking"></div></section>
+</div>
+</div></main>
+<script src="admin.js"></script>
+</body></html>
